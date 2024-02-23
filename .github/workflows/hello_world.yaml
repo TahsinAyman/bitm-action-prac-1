@@ -1,0 +1,18 @@
+name: Hello Universe 🚀
+on:     # When will it 💂
+  push: # On push it will 💂
+    branches: # Which 🌴 will it 💂
+      - main # On Main 🌴 it will 💂
+  workflow_dispatch:
+jobs: # Works to be done
+  build_and_test: # Pipeline to be complete
+    runs-on: ubuntu-20.04 # Server to be ran on
+    steps: # Steps to go through
+      - name: Clone Code # Name of the steps
+        uses: actions/checkout@v2 # What it does
+      - name: Compile Java File # Name of the steps
+        shell: bash # What shell to use
+        run: javac Main.java # What it does
+      - name: Run The Java File # Name of the steps
+        shell: bash # What shell to use
+        run: java Main # What it does
